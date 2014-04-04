@@ -1,0 +1,132 @@
+Web Developers must learn
+
+HTML: To specify content of webpages.
+CSS : To specify the presentation of web pages
+Javascript: To specify the behavior of web pages
+
+Javascript is a high-level dynamic, untyped interpreted programming language that is well-suited to object-oriented and functional programming styles.
+
+Derives its first-class functions from Scheme and its prototype-based inheritance from Self
+
+Except for a superficial syntactic resemblance, Javascript is completely different from Java programming language
+
+================================
+
+Javascript History:
+Names:
+- Licensed from Sun Microsystems used to describe Netscape's implementation of language.
+- Netscape submitted the language to ECMA(European Computer Manufacturer's Association) because of trademark issues it was renamed as "ECMAScript" 
+- Microsoft's version of language is known as 'JScript" 
+
+Versions:
+For the last decade all web browsers have implemented version 3 of ECMAScript standard.Recently an important new version of the language has been defined as ECMAScript 5. The versions are sometimes abbrevated as ES3 and ES5. Version 4 of ECMAScript was under development for years, but proved to be too ambitious and was never released. Sometimes the version numbers are denoted as JavaScript 1.5 or 1.8, these are Mozilla's version numbers and version 1.5 is basically ECMAScript 3.
+
+================================
+
+Core Javascript language defines a minimal API for working with text,arrays,dates and regular expressions but does not include any input or output functionality. Input and Output( as well as more sophisticated features like networking, storage and graphics) are responsibility of the host environment. Usually that host environment is a web browser.
+
+Part I of this book covers the language itself and its minimal built-in API
+Part II explains how JavaScript is used in web browsers and covers the sprawling browser-based API's loosely known as "client-side JavaScript"
+Part III is reference for core API
+Part IV is reference section for client-side JavaScript
+
+================================
+
+This chapter makes a quick first pass through the core language and the client-side API introducing key features that will make it easier to understand the in-depth treament in the chapters that follow.
+
+===============================
+
+Tools for testing Javascript
+
+- Every web browser includes a JavaScript Interpreter.
+- Javascript code is embedded in HTML files using <script> tags. When the browser loads the file, it will execute the code. 
+- Spurred on by the powerful and innovative Firebug extensions for Firefox, today's web browser all include tools for debugging,experimenting and learning.
+- The tools can be found in the menu of the browser under the names like " Developer Tools" or "Web Console".
+- Shortcut for console tools: F12 or Ctrl-Shift-J. These tools appear as panes at the top or the bottom of the browser.
+
+Developer tools:
+It pens multiple tabs that allows to inspect things like HTML document structure , CSS styles, network requests and so on. One of the tab is a "Javascript console" that allows you to type in lines of Javascript code and try them out.  
+
+There is a simple console API that is portably implemented by modern browsers. console.log() function can be used to display text on the console. 
+A similar but more intrusive way to display output or debugging is by passing a string of text to the alert() function.
+
+============================
+
+Console Programming Test:
+var x="hello world";
+undefined
+x
+"hello world"
+var book={topic:"Javascript",fat:true};
+undefined
+book.topic
+"Javascript"
+book["fat"]
+true
+var primes = [2,3,5,7];
+undefined
+primes[primes.length-1]
+7
+primes[0]+primes[1]
+5
+function factorial(n){ var p=1; for (var i=2;i<=n;i++) p *=i; return p:}
+SyntaxError: Unexpected token :
+function factorial(n){ var p=1; for (var i=2;i<=n;i++) p *=i; return p;}
+undefined
+factorial(5)
+120
+
+===================================
+
+Core Javascript:
+Gives an overview of Part I of this book. 
+
+1. Variables are declared with 'var' keyword
+2. Javascript supports several types of values: 
+              - Numbers(which include real), 
+              - String with double quotes/single quote, Boolean values, 
+              - Null is a special value that means "no value" and 
+              - Undefined is like null.
+              - Arrays
+              - Objects
+3. Syntax illustrated for listing array elements within square braces or mapping object property names to property values is known as 'initializer expression' 
+An expression is a phrase of JavaScript that can be evaluated to produce a value. '.' or '[]' refer to object property or array element in an expression
+	      - Most common expressions use opreators.(Shorthand or arithmetic operators, equality and relational operators, logical operators)
+4. Full sentences(lines that end in ;) are statements
+An expression is something that computes a value but doesn't do anything, it doesn't alter program state in any way. Statements on the other hand don't have value but they do alter the program state(ex: control structures such as conditionals and loops)
+5. Functions:
+A function is a parametrized block of JavaScript code that you define once and can then invoke over and over again
+When we combine functions with objects we get methods. 
+6. Javascript is an object-oriented language but it is quite different than most
+7. Regular Expressions.
+8. JavaScript Subsets and Extensions
+9. Server-side JavaScript, introduces two ways to use Javascript outside of web browsers
+
+====================================
+
+Client-Side JavaScript
+
+1. JavaScript in Web Browsers: Explains how to put JavaScript to work in web browser using <script> tag
+Usage:
+<html><head>
+<script src="library.js"></script>
+</head>
+<body>
+<script>
+// client side javascript code
+</script>
+</body>
+</html>
+
+2. Window Objects:
+Explains techniques for scripting the web browser and covers some important global functions.
+
+3. Scripting Documents:
+Gets down to the real business of client-side JavaScript, scripting HTML document content. It shows how to select prticular HTML elements from within a document, how to set HTML attributes of those elements and how to alter the content of those elements and how to add new elements to the document 
+
+
+
+
+ 
+
+
